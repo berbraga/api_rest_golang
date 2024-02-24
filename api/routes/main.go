@@ -11,6 +11,7 @@ func AppRoutes(router *gin.Engine) *gin.RouterGroup {
 	{
 		v1.GET("", cedulaController.FindAll)
 		v1.POST("", cedulaController.Create)
+		v1.DELETE("/:id", cedulaController.Delete)
 	}
 	return v1
 }
